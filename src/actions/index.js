@@ -9,13 +9,6 @@ export const addFeature = feature => {
     };
 };
 
-export const updateTotal = total => {
-    return {
-        type: UPDATE_TOTAL,
-        payload: total
-    };
-};
-
 export const removeFeature = remove => {
     return {
         type: REMOVE_FEATURE,
