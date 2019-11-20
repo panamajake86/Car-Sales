@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AdditionalFeature from './AdditionalFeature';
 
 const AdditionalFeatures = props => {
@@ -8,7 +9,8 @@ const AdditionalFeatures = props => {
       {props.additionalFeatures.length ? (
         <ol type="1">
           {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature key={item.id} feature={item} buyItem={props.buyItem} />
+            //I had to add the buyItem={props.buyItem} portion to drill the props to the additionalFeature.js so that the onClick={} would work.
           ))}
         </ol>
       ) : (
