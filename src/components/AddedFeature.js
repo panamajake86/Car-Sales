@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from "react-redux";
 
 const AddedFeature = props => {
   return (
@@ -7,10 +6,11 @@ const AddedFeature = props => {
       {/* Add an onClick to run a function to remove a feature */}
       <button className="button" onClick={()=>{
         props.removeFeature(props.feature);
+        //the props here are being pulled from App.js. This removeFeature function is fount in App.js.
       }}>X</button>
       {props.feature.name}
     </li>
   );
 };
 
-export default connect(null, {})(AddedFeature);
+export default AddedFeature;

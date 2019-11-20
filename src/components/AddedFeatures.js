@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from "react-redux";
 
 import AddedFeature from './AddedFeature';
 
@@ -11,6 +10,7 @@ const AddedFeatures = props => {
         <ol type="1">
           {props.car.features.map(item => (
             <AddedFeature key={item.id} feature={item} removeFeature={props.removeFeature} />
+            //I had to add the removeFeature={props.removeFeature} portion to drill the props to the addedFeature.js so that the onClick={} would work.
           ))}
         </ol>
       ) : (
@@ -20,4 +20,4 @@ const AddedFeatures = props => {
   );
 };
 
-export default connect(null, {})(AddedFeatures);
+export default AddedFeatures;
