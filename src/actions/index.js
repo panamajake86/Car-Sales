@@ -1,5 +1,4 @@
 export const ADD_FEATURE = "ADD_FEATURE";
-export const UPDATE_TOTAL = "UPDATE_TOTAL";
 export const REMOVE_FEATURE = "REMOVE_FEATURE";
 
 export const addFeature = feature => {
@@ -7,9 +6,10 @@ export const addFeature = feature => {
         type: ADD_FEATURE,
         payload: feature
     };
+    // console.log("I am add feature")
 };
 
-export const removeFeature = remove => {
+export const removeItem = remove => {
     return {
         type: REMOVE_FEATURE,
         payload: remove
